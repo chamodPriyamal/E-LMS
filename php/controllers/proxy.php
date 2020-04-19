@@ -9,11 +9,12 @@
     $server_output = curl_exec($ch);
     curl_close ($ch);
     $response = json_decode($server_output,true);
+
     if($response['success'])
     {
-        echo "OK";
+        echo 1;
     }
     else
     {
-        echo"BAD";
+        echo 0;
     }

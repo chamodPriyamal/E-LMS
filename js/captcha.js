@@ -1,5 +1,6 @@
 function verifyCaptcha()
 {
+    var result;
     var cresponse = grecaptcha.getResponse();
     var request = new XMLHttpRequest();
     request.open("POST","../php/controllers/proxy.php",true);
@@ -8,7 +9,7 @@ function verifyCaptcha()
     {
         if(request.readyState == 4 && request.status == 200)
         {
-            var result = request.responseText;
+            result = request.responseText;
             return result;
         }
     }

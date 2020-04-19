@@ -67,7 +67,7 @@ document.forms.regform.onsubmit = function(e)
 //Send OTP
 _("sendotp").onclick = function()
 {
-    if(verifyCaptcha() == "OK")
+    if(verifyCaptcha() === 1)
     {
         var mobile = _("mobile").value;
         var request = new XMLHttpRequest();
